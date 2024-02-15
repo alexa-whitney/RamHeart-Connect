@@ -1,13 +1,86 @@
-body {
+/* index.css */
+
+/* Global styles */
+body, html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #ffe5e9; 
+  font-family: 'Arial', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Layout styles */
+.main-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between; 
+}
+
+.main-content {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #701a34;
+}
+
+/* Header styles */
+.header {
+  background-color: transparent;
+  padding: 2rem 0; 
+}
+
+.logo-section {
+  margin-bottom: 2rem; 
+}
+
+.logo {
+  height: 20rem; 
+  width: auto;
+  display: block; 
+  margin: 0 auto; 
+}
+
+.navigation {
+  background-color: #ffccd5;
+  padding: 1rem 0; 
+  border-top: 2px solid #f7d1d3;
+  border-bottom: 2px solid #f7d1d3; 
+  text-align: center;
+}
+
+.nav-links {
+  padding: 0;
+  margin: 0 auto;
+  gap: 1rem; 
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 1.5rem; 
+  color: #701a34; 
+  text-decoration: none;
+  display: inline-block; 
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  color: #ffffff; 
+  background-color: #701a34;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #ffccd5;
+  padding: 1rem 0; 
+}
+
+.footer-container {
+  padding: 0 2rem; 
+}
+
+.footer-text {
+  font-size: 1.2rem; 
+  color: #701a34;
+  text-align: center;
 }
