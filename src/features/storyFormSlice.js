@@ -9,7 +9,7 @@ const initialState = {
     consent: false,
   },
   stories: [] // This array will hold all submitted stories
-  
+
 };
 
 const storyFormSlice = createSlice({
@@ -18,15 +18,16 @@ const storyFormSlice = createSlice({
   reducers: {
     updateField(state, action) {
       const { field, value } = action.payload;
-      state[field] = value;
+      // Correctly address the nested `currentEntry` structure
+      state.currentEntry[field] = value;
     },
     // Reducer for submission
     submitStory(state) {
       // Check for consent before adding the story to the array
       if (state.currentEntry.consent) {
-        state.stories.push(state.currentEntry);
+        state.stories.push({ ...state.currentEntry }); // Spread to avoid direct state mutation
         // Reset currentEntry after submission
-        state.currentEntry = initialState.currentEntry;
+        state.currentEntry = { ...initialState.currentEntry }; // Reset the form fields
       } else {
         // Handle the case where consent is not given
         console.error("Consent not given for story submission");

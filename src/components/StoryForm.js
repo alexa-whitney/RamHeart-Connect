@@ -21,7 +21,7 @@ const StoryForm = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// Dispatch an action to submit the form
-		dispatch(submitStory(currentEntry));
+		dispatch(submitStory());
 	};
 
 	return (
