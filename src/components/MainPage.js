@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import StoryForm from './StoryForm';
+import StoryList from './StoryList';
 
 const MainPage = () => {
   return (
@@ -47,6 +48,7 @@ const MainPage = () => {
         <section className="story-submission-section">
           <h2>Share Your Story</h2>
           <StoryForm />
+          <StoryList />
         </section>
       </main>
       <Footer />
