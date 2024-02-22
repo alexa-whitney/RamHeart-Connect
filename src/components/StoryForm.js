@@ -1,23 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateField } from './storyFormSlice';
+import { updateField, submitStory } from '../features/storyFormSlice';
 
 const StoryForm = () => {
-	// Use the `useSelector` hook to retrieve the form data from the Redux store
-	const story = useSelector((state) => state.storyForm);
+	// Access the currentEntry part of the state for the form fields
+	const currentEntry = useSelector((state) => state.storyForm.currentEntry);
 	// Use the `useDispatch` hook to retrieve the `dispatch` function from the Redux store
 	const dispatch = useDispatch();
 
-	// Create a state variable to hold the form data (via Controlled Component pattern)
-	const [story, setStory] = useState({
-		name: '',
-		email: '',
-		title: '',
-		content: '',
-		consent: false
-	});
-
-	// Create a function to handle form input changes
+	// Function to handle form input changes
 	const handleChange = (e) => {
 		const { name, value, type, checked } = e.target;
 		dispatch(updateField({
@@ -26,11 +17,11 @@ const StoryForm = () => {
 		}));
 	};
 
-	// Create a function to handle form submission
+	// Function to handle form submission
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// Dispatch an action to submit the form
-		dispatch(submitStory(story));
+		dispatch(submitStory(currentEntry));
 	};
 
 	return (
@@ -38,27 +29,27 @@ const StoryForm = () => {
 			<input
 				type="text"
 				name="name"
-				value={story.name}
+				value={currentEntry.name}
 				onChange={handleChange}
 				placeholder="Your name or pseudonym"
 			/>
 			<input
 				type="email"
 				name="email"
-				value={story.email}
+				value={currentEntry.email}
 				onChange={handleChange}
 				placeholder="Your email"
 			/>
 			<input
 				type="text"
 				name="title"
-				value={story.title}
+				value={currentEntry.title}
 				onChange={handleChange}
 				placeholder="Story title"
 			/>
 			<textarea
 				name="content"
-				value={story.content}
+				value={currentEntry.content}
 				onChange={handleChange}
 				placeholder="Your story"
 			/>
@@ -66,7 +57,7 @@ const StoryForm = () => {
 				<input
 					type="checkbox"
 					name="consent"
-					checked={story.consent}
+					checked={currentEntry.consent}
 					onChange={handleChange}
 				/>
 				I consent to share my story publicly.

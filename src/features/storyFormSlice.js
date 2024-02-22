@@ -1,12 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  name: '',
-  email: '',
-  title: '',
-  content: '',
-  consent: false,
-  // Add additional state related to submission status, errors, etc.
+  currentEntry: {
+    name: '',
+    email: '',
+    title: '',
+    content: '',
+    consent: false,
+  },
+  stories: [] // This array will hold all submitted stories
+  
 };
 
 const storyFormSlice = createSlice({
@@ -17,9 +20,20 @@ const storyFormSlice = createSlice({
       const { field, value } = action.payload;
       state[field] = value;
     },
-    // Add other reducers for submission, reset, etc.
+    // Reducer for submission
+    submitStory(state) {
+      // Check for consent before adding the story to the array
+      if (state.currentEntry.consent) {
+        state.stories.push(state.currentEntry);
+        // Reset currentEntry after submission
+        state.currentEntry = initialState.currentEntry;
+      } else {
+        // Handle the case where consent is not given
+        console.error("Consent not given for story submission");
+      }
+    }
   },
 });
 
-export const { updateField } = storyFormSlice.actions;
+export const { updateField, submitStory } = storyFormSlice.actions;
 export default storyFormSlice.reducer;

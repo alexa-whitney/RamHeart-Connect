@@ -12,6 +12,7 @@ const Header = () => {
         <a href="#" className="nav-link">Stories</a>
         <a href="#" className="nav-link">Directory</a>
         <a href="#" className="nav-link">Contact</a>
+        <a href="#" className="nav-link">Share Your Story ❤️</a>
       </nav>
     </header>
   );
