@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import logo from '../images/ramheart.png';
 
 const Header = () => {
@@ -8,11 +9,12 @@ const Header = () => {
         <img src={logo} alt="RamHeart Connect Logo" className="logo" />
       </div>
       <nav className="navigation">
-        <a href="#" className="nav-link">Home</a>
-        <a href="#" className="nav-link">Stories</a>
-        <a href="#" className="nav-link">Directory</a>
-        <a href="#" className="nav-link">Contact</a>
-        <a href="#" className="nav-link">Share Your Story ❤️</a>
+        <Link to="home-section" className="nav-link" smooth={true} duration={500}>Home</Link>
+        <Link to="about-section" className="nav-link" smooth={true} duration={500}>About</Link>
+        <Link to="resources-section" className="nav-link" smooth={true} duration={500}>Resources</Link>
+        <Link to="stories-section" className="nav-link" smooth={true} duration={500}>Stories</Link>
+        <Link to="share-story-section" className="nav-link" smooth={true} duration={500}>Share Your Story ❤️</Link>
+        <Link to="contact-section" className="nav-link" smooth={true} duration={500}>Contact Us</Link>
       </nav>
     </header>
   );

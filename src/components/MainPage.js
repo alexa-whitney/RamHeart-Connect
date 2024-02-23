@@ -14,8 +14,8 @@ const MainPage = () => {
           Your central hub for congenital heart defect support and resources.
         </p>
 
-        {/* Introduction or About Section */}
-        <section className="about-section">
+        {/* About Section */}
+        <section id="about-section" className="about-section">
           <h2>About RamHeart Connect</h2>
           <p>
             RamHeart Connect is a community-driven platform dedicated to supporting
@@ -25,8 +25,8 @@ const MainPage = () => {
           </p>
         </section>
 
-        {/* Features or Services Section */}
-        <section className="features-section">
+        {/* Resources Section */}
+        <section id="resources-section" className="features-section">
           <h2>What We Offer</h2>
           <ul>
             <li>Interactive guides for understanding CHD</li>
@@ -36,19 +36,24 @@ const MainPage = () => {
           </ul>
         </section>
 
-        {/* Call to Action or Engagement Section */}
-        <section className="cta-section">
+        {/* Stories Section */}
+        <section id="stories-section" className="story-submission-section">
+          <StoryList />
+        </section>
+
+        {/* Share Your Story Section */}
+        <section id="share-story-section" className="share-story-section">
+          <h2>Share Your Story</h2>
+          <StoryForm />
+        </section>
+
+        {/* Contact Us Section */}
+        <section id="contact-section" className="contact-section">
           <h2>Join Our Community</h2>
           <p>
             Share your story, connect with others, and find support.
             Together, we're stronger.
           </p>
-        </section>
-
-        <section className="story-submission-section">
-          <h2>Share Your Story</h2>
-          <StoryForm />
-          <StoryList />
         </section>
       </main>
       <Footer />
