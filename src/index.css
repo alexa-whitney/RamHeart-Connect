@@ -68,67 +68,29 @@ html {
   background-color: #701a34;
 }
 
-/* Footer styles */
-.footer {
-  background-color: #ffccd5;
-  padding: 1rem 0;
-}
-
-.footer-container {
-  padding: 0 2rem;
-}
-
-.footer-text {
-  font-size: 1.2rem;
-  color: #701a34;
-  text-align: center;
-}
-
-/* Features or Services Section Styles */
-.features-section {
+/* Resources Styles */
+.resources-section {
   text-align: left;
   margin: 2rem auto;
   max-width: 800px;
 }
 
-.features-section h2 {
+.resources-section h2 {
   font-size: 2rem;
   color: #701a34;
   margin-bottom: 1rem;
 }
 
-.features-section ul {
+.resources-section ul {
   list-style: inside square;
   padding: 0;
   margin: 1rem 0;
 }
 
-.features-section li {
+.resources-section li {
   font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 0.5rem;
-}
-
-/* Call to Action Section Styles */
-.cta-section {
-  text-align: center;
-  margin: 3rem auto;
-}
-
-.cta-button {
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  background-color: #701a34;
-  color: #ffffff;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #ff6384;
-  transform: translateY(-2px);
 }
 
 /* Story Form styles */
@@ -240,4 +202,20 @@ html {
   color: red;
   font-style: italic;
   margin-top: 1rem;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #ffccd5;
+  padding: 1rem 0;
+}
+
+.footer-container {
+  padding: 0 2rem;
+}
+
+.footer-text {
+  font-size: 1.2rem;
+  color: #701a34;
+  text-align: center;
 }

@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import StoryForm from './StoryForm';
 import StoryList from './StoryList';
+import DisplayMedicalCondition from './DisplayMedicalCondition';
 
 const MainPage = () => {
   return (
@@ -26,14 +27,23 @@ const MainPage = () => {
         </section>
 
         {/* Resources Section */}
-        <section id="resources-section" className="features-section">
-          <h2>What We Offer</h2>
-          <ul>
-            <li>Interactive guides for understanding CHD</li>
-            <li>Personal stories and experiences from our community</li>
-            <li>A directory of healthcare providers specializing in CHD</li>
-            <li>Latest news and updates on CHD research</li>
-          </ul>
+        <section id="resources-section" className="resources-section">
+          <h2>Search Medical Conditions</h2>
+          <p>
+            Find information on specific congenital heart defects and related conditions 
+            to better understand the diagnosis and treatment options. The information is 
+            provided by the National Institute of Health's National Library of Medicine.
+          </p>
+          <DisplayMedicalCondition />
+        </section>
+
+        {/* Directory Section */}
+        <section id="directory-section" className="directory-section">
+          <h2>Find a Specialist</h2>
+          <p>
+            Search for a healthcare provider near you with experience in treating
+            congenital heart defects.
+          </p>
         </section>
 
         {/* Stories Section */}
