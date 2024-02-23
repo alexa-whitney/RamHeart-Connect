@@ -8,7 +8,8 @@ const initialState = {
     content: '',
     consent: false,
   },
-  stories: [] // This array will hold all submitted stories
+  stories: [], // This array will hold all submitted stories
+  error: null, // Handle error messages
 
 };
 
@@ -28,9 +29,10 @@ const storyFormSlice = createSlice({
         state.stories.push({ ...state.currentEntry }); // Spread to avoid direct state mutation
         // Reset currentEntry after submission
         state.currentEntry = { ...initialState.currentEntry }; // Reset the form fields
+        state.error = null; // Reset the error state
       } else {
         // Handle the case where consent is not given
-        console.error("Consent not given for story submission");
+        state.error = "Consent must be approved before the story can be published.";
       }
     }
   },

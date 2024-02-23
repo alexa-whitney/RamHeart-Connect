@@ -5,6 +5,8 @@ import { updateField, submitStory } from '../features/storyFormSlice';
 const StoryForm = () => {
 	// Access the currentEntry part of the state for the form fields
 	const currentEntry = useSelector((state) => state.storyForm.currentEntry);
+	// Retrieve the error message from the Redux store
+	const error = useSelector((state) => state.storyForm.error); 
 	// Use the `useDispatch` hook to retrieve the `dispatch` function from the Redux store
 	const dispatch = useDispatch();
 
@@ -62,6 +64,7 @@ const StoryForm = () => {
 				/>
 				I consent to share my story publicly.
 			</label>
+			{error && <p className="error-message">{error}</p>}
 			<button className="cta-button" type="submit">Submit Your Story ❤️</button>
 		</form>
 	);

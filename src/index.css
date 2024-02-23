@@ -224,7 +224,6 @@ html {
   cursor: pointer;
 }
 
-
 .ekg-line {
   position: absolute;
   width: 100%;
@@ -235,4 +234,10 @@ html {
 .ekg-line path {
   stroke-width: 1;
   stroke: #ff6384;
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+  margin-top: 1rem;
 }
