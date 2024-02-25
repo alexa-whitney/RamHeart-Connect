@@ -5,29 +5,29 @@ import heartSvg from '../images/flower_heart.svg';
 import '../index.css';
 
 const heartBeats = {
-  beat: {
-    scale: [1, 0.9, 1],
-    transition: {
-      duration: 1, // increased from 0.5 for a slower beat
-      ease: "easeInOut",
-      times: [0, 0.5, 1],
-      repeat: Infinity,
-      repeatType: "loop",
-    },
-  },
+	beat: {
+		scale: [1, 0.9, 1],
+		transition: {
+			duration: 1, // increased from 0.5 for a slower beat
+			ease: "easeInOut",
+			times: [0, 0.5, 1],
+			repeat: Infinity,
+			repeatType: "loop",
+		},
+	},
 };
 
 const ekgVariants = {
-  initial: { pathLength: 0 },
-  animate: {
-    pathLength: 1,
-    transition: {
-      repeat: Infinity,
-      repeatType: "loop",
-      duration: 2,
-      ease: "linear"
-    }
-  }
+	initial: { pathLength: 0 },
+	animate: {
+		pathLength: 1,
+		transition: {
+			repeat: Infinity,
+			repeatType: "loop",
+			duration: 2,
+			ease: "linear"
+		}
+	}
 };
 
 const LandingPage = () => {
@@ -35,15 +35,17 @@ const LandingPage = () => {
 
 	return (
 		<div className="landing-page">
-			<motion.img
-				src={heartSvg}
-				alt="Heart"
-				className="heart-svg"
-				variants={heartBeats}
-				animate="beat"
-				whileHover={{ scale: 1.1 }}
-				onClick={() => navigate('/main')}
-			/>
+			<div className="heart-container" onClick={() => navigate('/main')}>
+				<motion.img
+					src={heartSvg}
+					alt="Heart"
+					className="heart-svg"
+					variants={heartBeats}
+					animate="beat"
+					whileHover={{ scale: 1.05 }}
+				/>
+				<p className="heart-instruction">Click on the heart to find support for CHD.</p>
+			</div>
 			<motion.svg
 				className="ekg-line"
 				width="100%"

@@ -354,7 +354,25 @@ button:hover {
   background-color: rgb(225, 191, 191)smoke;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: -10vh;
+}
+
+.heart-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.heart-instruction {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: -5rem; 
+  left: 0;
+  color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
 }
 
 .heart-svg {
