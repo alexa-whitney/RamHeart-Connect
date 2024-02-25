@@ -8,21 +8,22 @@ const StoryList = () => {
   return (
     <div className="story-list">
       <h2>Submitted Stories</h2>
-      {stories.length > 0 ? (
-        <ul>
-          {stories.map((story, index) => (
-            <li key={index}>
+      <div className="story-grid">
+        {stories.length > 0 ? (
+          stories.map((story, index) => (
+            <div key={index} className="story-card">
               <h3>{story.title}</h3>
               <p>{story.content}</p>
               <small>Submitted by: {story.name}</small>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No stories have been submitted yet.</p>
-      )}
+            </div>
+          ))
+        ) : (
+          <p>No stories have been submitted yet.</p>
+        )}
+      </div>
     </div>
   );
 };
 
 export default StoryList;
+

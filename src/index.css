@@ -298,41 +298,53 @@ button:hover {
   background: #ff6384;
 }
 
-/* Story List styles */
+/* Story List Grid styles */
 .story-list {
   margin: 2rem auto;
   padding: 1rem;
-  max-width: 800px;
+  max-width: 1200px; /* Adjust the max-width as needed */
 }
 
 .story-list h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
-.story-list ul {
-  list-style: none;
-  padding: 0;
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid */
+  gap: 1.5rem;
 }
 
-.story-list li {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
+.story-card {
+  background: var(--light-bg);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.story-list h3 {
-  margin: 0.5rem 0;
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.story-list p {
-  margin: 0.5rem 0;
+.story-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
-.story-list small {
+.story-card p {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.story-card small {
   display: block;
-  margin-top: 1rem;
-  color: #666;
+  margin-top: 0.5rem;
+  color: var(--secondary-color);
   font-style: italic;
 }
 
