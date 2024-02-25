@@ -13,31 +13,37 @@ const DisplayMedicalCondition = () => {
 	};
 
 	return (
-		<div>
-			<SearchConditionsInput />
-			<button onClick={handleSearch} disabled={!searchTerm || status === 'loading'}>
-				Search
-			</button>
-			{error && <p>{error}</p>}
+		<div className="resources-section">
+			<div className="search-container">
+				<SearchConditionsInput />
+				<button
+					className="search-button"
+					onClick={handleSearch}
+					disabled={!searchTerm || status === 'loading'}
+				>
+					Search
+				</button>
+			</div>
+			{error && <p className="error-message">{error}</p>}
 			{status === 'loading' && <p>Loading...</p>}
-			<ul>
+			<div className="results-grid">
 				{results.map((result, index) => (
-					<li key={index}>
-						<p>{result.name}</p>
-						{result.links && (
-							<ul>
-								{result.links.map((link, linkIndex) => (
-									<li key={linkIndex}>
-										<a href={link[0]} target="_blank" rel="noopener noreferrer">
+					<div key={index} className="card">
+						<div className="card-content">
+							<h3 className="card-title">{result.name}</h3>
+							{result.links && (
+								<div className="card-links">
+									{result.links.map((link, linkIndex) => (
+										<a key={linkIndex} href={link[0]} target="_blank" rel="noopener noreferrer" className="card-link">
 											{link[1]}
 										</a>
-									</li>
-								))}
-							</ul>
-						)}
-					</li>
+									))}
+								</div>
+							)}
+						</div>
+					</div>
 				))}
-			</ul>
+			</div>
 		</div>
 	);
 };

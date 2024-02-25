@@ -4,16 +4,20 @@ import Footer from './Footer';
 import StoryForm from './StoryForm';
 import StoryList from './StoryList';
 import DisplayMedicalCondition from './DisplayMedicalCondition';
+import SpeakHeartSvg from '../images/speak_heart.svg';
+import WithLoveSvg from '../images/undraw_with_love_red.svg';
 
 const MainPage = () => {
   return (
     <div className="main-page">
       <Header />
       <main className="main-content">
-        <h1 className="welcome-title">Welcome to RamHeart Connect</h1>
-        <p className="welcome-description">
-          Your central hub for congenital heart defect support and resources.
-        </p>
+        <section id="welcome-section" className="welcome-section">
+          <h1 className="welcome-title">Welcome to RamHeart Connect</h1>
+          <p className="welcome-description">
+            Your central hub for congenital heart defect support and resources.
+          </p>
+        </section>
 
         {/* About Section */}
         <section id="about-section" className="about-section">
@@ -28,10 +32,11 @@ const MainPage = () => {
 
         {/* Resources Section */}
         <section id="resources-section" className="resources-section">
+          <img src={WithLoveSvg} alt="Search Medical Conditions" className="illustration" />
           <h2>Search Medical Conditions</h2>
           <p>
-            Find information on specific congenital heart defects and related conditions 
-            to better understand the diagnosis and treatment options. The information is 
+            Find information on specific congenital heart defects and related conditions
+            to better understand the diagnosis and treatment options. The information is
             provided by the National Institute of Health's National Library of Medicine.
           </p>
           <DisplayMedicalCondition />
@@ -53,6 +58,7 @@ const MainPage = () => {
 
         {/* Share Your Story Section */}
         <section id="share-story-section" className="share-story-section">
+          <img src={SpeakHeartSvg} alt="Share Your Story" className="illustration" />
           <h2>Share Your Story</h2>
           <StoryForm />
         </section>

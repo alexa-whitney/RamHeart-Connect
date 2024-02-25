@@ -1,10 +1,32 @@
+:root {
+  --primary-color: #701a34; 
+  --secondary-color: #8B0000; 
+  --accent-color: #DAA520; 
+  --light-bg: #f8eee7; 
+  --text-color: #333; 
+  --error-color: #ff6384; 
+}
+
+h1, h2, h3, p {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Global styles */
 body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #ffe5e9;
-  font-family: "Arial", sans-serif;
+  background-color: var(--light-bg);
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  background: linear-gradient(45deg, #8B0000, #DAA520); 
+}
+
+button:hover {
+  background: linear-gradient(45deg, #651a1b, #b8860b); 
 }
 
 /* Layout styles */
@@ -32,14 +54,14 @@ html {
 }
 
 .logo {
-  height: 20rem;
+  height: auto;
   width: auto;
   display: block;
   margin: 0 auto;
 }
 
 .navigation {
-  background-color: #ffccd5;
+  background-color: #701b1b;
   padding: 1rem 0;
   border-top: 2px solid #f7d1d3;
   border-bottom: 2px solid #f7d1d3;
@@ -55,7 +77,7 @@ html {
 
 .nav-link {
   font-size: 1.5rem;
-  color: #701a34;
+  color: white;
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -64,33 +86,174 @@ html {
 }
 
 .nav-link:hover {
-  color: #ffffff;
-  background-color: #701a34;
+  color: #701b1b;
+  background-color: #f8eee7;
 }
 
 /* Resources Styles */
 .resources-section {
-  text-align: left;
-  margin: 2rem auto;
-  max-width: 800px;
+  background: white; 
+  color: #8B0000; 
+  padding: 2rem;
+  border-radius: 15px;
 }
 
-.resources-section h2 {
-  font-size: 2rem;
+.search-container {
+  max-width: 600px; 
+  margin: 2rem auto; 
+  display: flex;
+  align-items: center; 
+  gap: 1rem;
+}
+
+.search-input {
+  flex: 1; 
+  padding: 0.75rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 25px;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 25px;
+}
+
+.search-button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Card styles for search results */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--light-bg);
+  border: 2px solid var(--secondary-color);
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px 0px rgba(50, 50, 50, 0.75);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
   color: #701a34;
   margin-bottom: 1rem;
 }
 
+.card-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-link {
+  color: #0066cc;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Search section header styles */
+.resources-section h2,
+.resources-section p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resources-section h2 {
+  font-size: 2.5rem;
+  color: #701a34;
+}
+
+.resources-section p {
+  font-size: 1.25rem;
+  color: #333;
+}
+
 .resources-section ul {
-  list-style: inside square;
   padding: 0;
   margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
 }
 
 .resources-section li {
-  font-size: 1.25rem;
-  line-height: 1.6;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; 
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resources-section li:hover {
+  transform: scale(1.02); /* scale up card on hover */
+}
+
+.resources-section .card-content {
+  padding: 1rem;
+}
+
+.resources-section .card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #701a34;
   margin-bottom: 0.5rem;
+}
+
+.resources-section .card-links {
+  margin-top: 0.5rem;
+}
+
+.resources-section a {
+  color: #0066cc; 
+  text-decoration: none; 
+  font-size: 1rem;
+}
+
+.resources-section a:hover {
+  text-decoration: underline; 
+}
+
+.resources-section div {
+  font-weight: bold;
+  margin-top: 1rem; 
+}
+
+/* Search header styles */
+.resources-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resources-header h2 {
+  font-size: 2.5rem;
+  color: #701a34;
+  margin-bottom: 0.5rem;
+}
+
+.resources-header p {
+  font-size: 1.25rem;
+  color: #333;
 }
 
 /* Story Form styles */
@@ -218,4 +381,81 @@ html {
   font-size: 1.2rem;
   color: #701a34;
   text-align: center;
+}
+
+/* Typography enhancements */
+.welcome-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  color: #701a34;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Gradient and Illustration styles */
+.about-section,
+.resources-section,
+.directory-section,
+.story-submission-section,
+.contact-section {
+  background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before,
+.resources-section::before,
+.directory-section::before,
+.story-submission-section::before,
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background: url('./images/flower_heart.svg') no-repeat right bottom;
+  background-size: contain; */
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Adjust button styles to fit the theme */
+.main-content button {
+  background: #ff6384;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main-content button:hover {
+  background: #f05076; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the footer sticks to the bottom */
+.footer {
+  margin-top: auto;
+}
+
+/* SVG Styles */
+.illustration {
+  max-width: 400px;
+  margin: 2rem auto;
+  display: block;
 }

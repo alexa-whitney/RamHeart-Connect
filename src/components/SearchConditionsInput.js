@@ -10,7 +10,12 @@ const SearchConditionsInput = () => {
   };
 
   return (
-    <input type="text" onChange={handleInputChange} placeholder="Search medical conditions" />
+    <input
+      type="text"
+      className="search-input"
+      onChange={handleInputChange}
+      placeholder="Search medical conditions"
+    />
   );
 };
 
