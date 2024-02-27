@@ -4,6 +4,7 @@ import Footer from './Footer';
 import StoryForm from './StoryForm';
 import StoryList from './StoryList';
 import DisplayMedicalCondition from './DisplayMedicalCondition';
+import ResourceDirectory from './ResourceDirectory';
 import SpeakHeartSvg from '../images/speak_heart.svg';
 import WithLoveSvg from '../images/undraw_with_love_red.svg';
 
@@ -30,8 +31,8 @@ const MainPage = () => {
           </p>
         </section>
 
-        {/* Resources Section */}
-        <section id="resources-section" className="resources-section">
+        {/* Search Section */}
+        <section id="search-section" className="search-section">
           <img src={WithLoveSvg} alt="Search Medical Conditions" className="illustration" />
           <h2>Search Medical Conditions</h2>
           <p>
@@ -42,13 +43,14 @@ const MainPage = () => {
           <DisplayMedicalCondition />
         </section>
 
-        {/* Directory Section */}
+        {/* Resource Directory Section */}
         <section id="directory-section" className="directory-section">
-          <h2>Find a Specialist</h2>
+          {/* Fine helpful Facebook support groups, notable hospitals, and other online support resources */}
+          <h2>Resource Directory</h2>
           <p>
-            Search for a healthcare provider near you with experience in treating
-            congenital heart defects.
+            Find helpful Facebook support groups, notable hospitals, and other online support resources.
           </p>
+          <ResourceDirectory />
         </section>
 
         {/* Stories Section */}

@@ -35,7 +35,7 @@ const Header = () => {
             <nav className="navigation">
                 <Link to="home-section" className="nav-link" smooth={true} duration={500}>Home</Link>
                 <Link to="about-section" className="nav-link" smooth={true} duration={500}>About</Link>
-                <Link to="resources-section" className="nav-link" smooth={true} duration={500}>Resources</Link>
+                <Link to="search-section" className="nav-link" smooth={true} duration={500}>Search Conditions</Link>
                 <Link to="directory-section" className="nav-link" smooth={true} duration={500}>Directory</Link>
                 <Link to="stories-section" className="nav-link" smooth={true} duration={500}>Stories</Link>
                 <Link to="share-story-section" className="nav-link" smooth={true} duration={500}>Share Your Story ❤️</Link>

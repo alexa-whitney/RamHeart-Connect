@@ -172,13 +172,13 @@ button:hover {
 }
 
 /* Search section header styles */
-.resources-section h2,
-.resources-section p {
+.search-section h2,
+.search-section p {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.resources-section h2 {
+.search-section h2 {
   font-size: 2.5rem;
   color: #701a34;
 }
@@ -188,7 +188,7 @@ button:hover {
   color: #333;
 }
 
-.resources-section ul {
+.search-section ul {
   padding: 0;
   margin: 1rem 0;
   display: flex;
@@ -196,7 +196,7 @@ button:hover {
   gap: 1rem; 
 }
 
-.resources-section li {
+.search-section li {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -205,56 +205,159 @@ button:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.resources-section li:hover {
+.search-section li:hover {
   transform: scale(1.02); /* scale up card on hover */
 }
 
-.resources-section .card-content {
+.search-section .card-content {
   padding: 1rem;
 }
 
-.resources-section .card-header {
+.search-section .card-header {
   font-size: 1.5rem;
   font-weight: bold;
   color: #701a34;
   margin-bottom: 0.5rem;
 }
 
-.resources-section .card-links {
+.search-section .card-links {
   margin-top: 0.5rem;
 }
 
-.resources-section a {
+.search-section a {
   color: #0066cc; 
   text-decoration: none; 
   font-size: 1rem;
 }
 
-.resources-section a:hover {
+.search-section a:hover {
   text-decoration: underline; 
 }
 
-.resources-section div {
+.search-section div {
   font-weight: bold;
   margin-top: 1rem; 
 }
 
-/* Search header styles */
-.resources-header {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Resource Directory Styles */
+.resource-directory {
+  padding: 2rem;
+  max-width: 1000px; 
+  margin: 2rem auto;
 }
 
-.resources-header h2 {
-  font-size: 2.5rem;
-  color: #701a34;
-  margin-bottom: 0.5rem;
+.resource-directory ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
 }
 
-.resources-header p {
-  font-size: 1.25rem;
+.resource-directory li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.resource-directory li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resource-directory h3 {
   color: #333;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0;
 }
+
+.resource-directory p {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center; 
+  margin: 0.5rem 0;
+}
+
+.resource-directory a {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.resource-directory a:hover {
+  background-color: #0056b3;
+}
+
+.resource-directory img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+/* Hospital Directory styles */
+.hospital-directory {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #ffffff; /* A light background to contrast with the main light-bg */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.hospital-directory h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.hospital-directory ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hospital-directory li {
+  border-bottom: 1px solid #eee; /* Subtle separator for each hospital entry */
+  padding: 1rem 0.5rem;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.hospital-directory li:hover {
+  background-color: #f9f9f9; /* Slight highlight on hover */
+}
+
+.hospital-directory h3 {
+  color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+.hospital-directory p {
+  color: var(--text-color);
+  margin: 0.5rem 0;
+}
+
+.hospital-directory a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hospital-directory a:hover {
+  text-decoration: underline;
+}
+
 
 /* Story Form styles */
 .story-form {

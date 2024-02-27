@@ -13,7 +13,7 @@ const DisplayMedicalCondition = () => {
 	};
 
 	return (
-		<div className="resources-section">
+		<div className="search-section">
 			<div className="search-container">
 				<SearchConditionsInput />
 				<button
