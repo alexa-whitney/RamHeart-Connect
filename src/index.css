@@ -3,7 +3,7 @@
   --secondary-color: #8B0000; 
   --accent-color: #DAA520; 
   --light-bg: #f8eee7; 
-  --text-color: #333; 
+  --text-color: #f8eee7; 
   --error-color: #ff6384; 
 }
 
@@ -21,14 +21,6 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-button {
-  background: linear-gradient(45deg, #8B0000, #DAA520); 
-}
-
-button:hover {
-  background: linear-gradient(45deg, #651a1b, #b8860b); 
-}
-
 /* Layout styles */
 .main-page {
   display: flex;
@@ -38,7 +30,7 @@ button:hover {
 }
 
 .main-content {
-  padding: 4rem 2rem;
+  padding: 2rem;
   text-align: center;
   color: #701a34;
 }
@@ -46,11 +38,21 @@ button:hover {
 /* Header styles */
 .header {
   background-color: transparent;
-  padding: 2rem 0;
+  color: #701a34;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.top-navigation {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
 }
 
 .logo-section {
-  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
 }
 
 .logo {
@@ -60,24 +62,27 @@ button:hover {
   margin: 0 auto;
 }
 
-.navigation {
-  background-color: #701b1b;
-  padding: 1rem 0;
-  border-top: 2px solid #f7d1d3;
-  border-bottom: 2px solid #f7d1d3;
+.share-story-link {
+  display: block; 
+  margin-top: 1rem; 
+  font-size: 1.2rem;
+  color: var(--text-color);
+  font-weight: bold;
   text-align: center;
 }
 
-.nav-links {
-  padding: 0;
-  margin: 0 auto;
-  gap: 1rem;
-  list-style: none;
+.share-story-link:hover {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  width: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .nav-link {
   font-size: 1.5rem;
-  color: white;
+  color: #701a34;
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -86,16 +91,48 @@ button:hover {
 }
 
 .nav-link:hover {
-  color: #701b1b;
-  background-color: #f8eee7;
+  color: #f8eee7;
+  background-color: #701b1b;
+  cursor: pointer;
 }
 
-/* Resources Styles */
-.resources-section {
-  background: white; 
-  color: #8B0000; 
+/* All Sections Styles */
+.about-section,
+.resources-section,
+.directory-section,
+.story-submission-section {
+  background: #701a34;
+  color: white;
   padding: 2rem;
   border-radius: 15px;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* About Styles */
+.about-section {
+  margin-top: 1rem;
+  text-align: left;
+  padding-top: 0;
+}
+
+.about-section p {
+  line-height: 1.5;
+  color: var(--light-bg);
+  margin-bottom: 1rem;
+}
+
+/* Searcb Styles */
+.search-section {
+  color: #8B0000; 
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.search-section p{
+  color: #8B0000; 
 }
 
 .search-container {
@@ -180,12 +217,12 @@ button:hover {
 
 .search-section h2 {
   font-size: 2.5rem;
-  color: #701a34;
+  color: var(--primary-color);
 }
 
-.resources-section p {
+.search-section p {
   font-size: 1.25rem;
-  color: #333;
+  color: var(--primary-color);
 }
 
 .search-section ul {
@@ -335,21 +372,16 @@ button:hover {
 }
 
 .hospital-directory li:hover {
-  background-color: #f9f9f9; /* Slight highlight on hover */
+  background-color: #f0c0c0; /* Slight highlight on hover */
 }
 
-.hospital-directory h3 {
+.hospital-directory h3, p {
   color: var(--secondary-color);
   margin: 0.5rem 0;
 }
 
-.hospital-directory p {
-  color: var(--text-color);
-  margin: 0.5rem 0;
-}
-
 .hospital-directory a {
-  color: var(--accent-color);
+  color: blue;
   text-decoration: none;
   font-weight: bold;
 }
@@ -410,8 +442,9 @@ button:hover {
 
 .story-list h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
+  margin-top: 0;
+  color: var(--text-color);
+  padding-bottom: 20px;
 }
 
 .story-grid {
@@ -434,13 +467,8 @@ button:hover {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.story-card h3 {
+.story-card h3, p {
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.story-card p {
-  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
@@ -449,6 +477,11 @@ button:hover {
   margin-top: 0.5rem;
   color: var(--secondary-color);
   font-style: italic;
+}
+
+/* Share Story Section */
+.share-story-section h2{
+  color: #701a34;
 }
 
 /* Landing Page styles */
@@ -502,7 +535,7 @@ button:hover {
 
 /* Footer styles */
 .footer {
-  background-color: #701b1b;
+  background-color: var(--primary-color);
   padding: 1rem 0;
 }
 
@@ -516,57 +549,10 @@ button:hover {
   text-align: center;
 }
 
-/* Typography enhancements */
-.welcome-title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3rem;
-  color: #701a34;
-  margin-bottom: 0.5rem;
-}
-
-.welcome-description {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 2rem;
-}
-
-/* Gradient and Illustration styles */
-.about-section,
-.resources-section,
-.directory-section,
-.story-submission-section,
-.contact-section {
-  background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
-  color: white;
-  padding: 2rem;
-  border-radius: 15px;
-  margin: 2rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-section::before,
-.resources-section::before,
-.directory-section::before,
-.story-submission-section::before,
-.contact-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  /* background: url('./images/flower_heart.svg') no-repeat right bottom;
-  background-size: contain; */
-  opacity: 0.2;
-  pointer-events: none;
-}
-
-/* Adjust button styles to fit the theme */
+/* Button Styles */
 .main-content button {
-  background: #ff6384;
-  color: #fff;
+  background: white;
+  color: #701a34;
   padding: 0.5rem 2rem;
   font-size: 1.25rem;
   border: none;
@@ -577,8 +563,8 @@ button:hover {
 }
 
 .main-content button:hover {
-  background: #f05076; 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: #701a34;
+  color: white;
 }
 
 /* Ensure the footer sticks to the bottom */

@@ -18,10 +18,15 @@ const logoAnimation = {
     }
 };
 
-
 const Header = () => {
     return (
         <header className="header">
+            <nav className="top-navigation">
+                <Link to="home-section" className="nav-link" smooth={true} duration={500}>Home</Link>
+                <Link to="about-section" className="nav-link" smooth={true} duration={500}>About</Link>
+                <Link to="search-section" className="nav-link" smooth={true} duration={500}>Search Conditions</Link>
+                <Link to="directory-section" className="nav-link" smooth={true} duration={500}>Resource Directory</Link>
+            </nav>
             <div className="logo-section">
                 <motion.img
                     src={logo}
@@ -32,16 +37,9 @@ const Header = () => {
                     variants={logoAnimation}
                 />
             </div>
-            <nav className="navigation">
-                <Link to="home-section" className="nav-link" smooth={true} duration={500}>Home</Link>
-                <Link to="about-section" className="nav-link" smooth={true} duration={500}>About</Link>
-                <Link to="search-section" className="nav-link" smooth={true} duration={500}>Search Conditions</Link>
-                <Link to="directory-section" className="nav-link" smooth={true} duration={500}>Directory</Link>
-                <Link to="stories-section" className="nav-link" smooth={true} duration={500}>Stories</Link>
-                <Link to="share-story-section" className="nav-link" smooth={true} duration={500}>Share Your Story ❤️</Link>
-            </nav>
         </header>
     );
 };
 
 export default Header;
+

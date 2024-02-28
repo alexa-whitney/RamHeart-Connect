@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import Header from './Header';
 import Footer from './Footer';
 import StoryForm from './StoryForm';
@@ -13,22 +14,19 @@ const MainPage = () => {
     <div className="main-page">
       <Header />
       <main className="main-content">
-        <section id="welcome-section" className="welcome-section">
-          <h1 className="welcome-title">Welcome to RamHeart Connect</h1>
-          <p className="welcome-description">
-            Your central hub for congenital heart defect support and resources.
-          </p>
-        </section>
+
 
         {/* About Section */}
         <section id="about-section" className="about-section">
-          <h2>About RamHeart Connect</h2>
           <p>
-            RamHeart Connect is a community-driven platform dedicated to supporting
-            families and individuals affected by congenital heart defects (CHD). Here,
-            you can find the latest research, treatment options, and connect with others
-            on the same journey.
+          RamHeart Connect is a community-driven platform dedicated to supporting families 
+          and individuals affected by congenital heart defects (CHD). Explore our 'Search 
+          Medical Conditions' for the latest research and treatment options. Navigate our 
+          'Resource Directory' for valuable support groups and healthcare facilities. Browse 
+          'Story List' to read shared experiences, and if you're moved to share your own 
+          journey, the 'Share Your Story' form is a click away.
           </p>
+          <Link to="share-story-section" className="share-story-link" smooth={true} duration={500}>Share Your Story ❤️</Link>
         </section>
 
         {/* Search Section */}
@@ -37,19 +35,14 @@ const MainPage = () => {
           <h2>Search Medical Conditions</h2>
           <p>
             Find information on specific congenital heart defects and related conditions
-            to better understand the diagnosis and treatment options. The information is
-            provided by the National Institute of Health's National Library of Medicine.
+            to better understand the diagnosis and treatment options.
           </p>
           <DisplayMedicalCondition />
         </section>
 
         {/* Resource Directory Section */}
         <section id="directory-section" className="directory-section">
-          {/* Fine helpful Facebook support groups, notable hospitals, and other online support resources */}
           <h2>Resource Directory</h2>
-          <p>
-            Find helpful Facebook support groups, notable hospitals, and other online support resources.
-          </p>
           <ResourceDirectory />
         </section>
 
