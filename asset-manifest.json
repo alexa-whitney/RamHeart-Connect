@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/RamHeart-Connect/static/css/main.203c6862.css",
+    "main.js": "/RamHeart-Connect/static/js/main.b0dcb535.js",
+    "static/media/flower_heart.svg": "/RamHeart-Connect/static/media/flower_heart.2a2e475256c02e0ca3364affc4409179.svg",
+    "static/media/speak_heart.svg": "/RamHeart-Connect/static/media/speak_heart.1a6b36690583545775c4f3f3df8438db.svg",
+    "static/media/ramheart.png": "/RamHeart-Connect/static/media/ramheart.e5dadd24a291e3e98238.png",
+    "static/media/heart_moms_qr.svg": "/RamHeart-Connect/static/media/heart_moms_qr.6a997240561d85fbcdbb43eec10d7cda.svg",
+    "static/media/babies_with_vsd_group_qr.svg": "/RamHeart-Connect/static/media/babies_with_vsd_group_qr.43e0698a4e9fdad213b58ba77259bba2.svg",
+    "static/media/children_with_chd_group_qr.svg": "/RamHeart-Connect/static/media/children_with_chd_group_qr.9535e778d76298bca0802d1ed1daa644.svg",
+    "static/media/undraw_with_love_red.svg": "/RamHeart-Connect/static/media/undraw_with_love_red.83659989dec874cefa0c544ed6b2e773.svg",
+    "index.html": "/RamHeart-Connect/index.html",
+    "main.203c6862.css.map": "/RamHeart-Connect/static/css/main.203c6862.css.map",
+    "main.b0dcb535.js.map": "/RamHeart-Connect/static/js/main.b0dcb535.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.203c6862.css",
+    "static/js/main.b0dcb535.js"
+  ]
+}
