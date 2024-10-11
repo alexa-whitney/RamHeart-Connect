@@ -5,9 +5,10 @@ import MainPage from './components/MainPage';
 import './index.css';
 
 function App() {
+  const repoName = '/RamHeart-Connect';
 
   return (
-    <Router>
+    <Router basename={repoName}>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/main" element={<MainPage />} />

@@ -1,4 +1,6 @@
 # RamHeart Connect
+![Docker Build Status](https://img.shields.io/docker/cloud/build/alexawhit/ramheart-connect)
+![Website Monitoring](https://img.shields.io/uptimerobot/status/797824217)
 
 ## Screenshots
 ![App Screenshot](https://i.imgur.com/t47TOpF.png)
@@ -46,6 +48,24 @@ cd RamHeart-Connect
 npm install
 npm start
 ```
+
+## Docker Setup
+
+To build and run the RamHeart Connect app using Docker, follow these steps:
+
+1. Ensure you have Docker installed on your system.
+
+2. Build the Docker image:
+```bash
+docker build -t ramheart-connect .
+```
+
+3. Run the Docker container:
+```bash
+docker run -p 3000:3000 ramheart-connect
+```
+
+4. Access the application by opening a web browser and navigating to `http://localhost:3000`.
 
 ## Usage
 
